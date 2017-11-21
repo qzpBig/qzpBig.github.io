@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+	<style>
+		body,ul ,li{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.clearfix::before,
+         .clearfix::after{
+	      content:'';
+	      display: block;
+	      line-height: 0;
+	      height: 0;
+	      visibility: hidden;
+	      clear: both;
+        }
+		.wrapper{
+			width: 1000px;
+			height: 500px;
+			/*background-color: red;*/
+			margin: 30px auto;
+			border: 2px dashed #ccc;
+			overflow: hidden;
+			background-image:linear-gradient(30deg,#fff,#000) ;
+		}
+		.self{
+			height: 200px;
+			width: 200px;
+			/*background-color: #000;*/
+			border-radius: 50%;
+			margin-top: 10px;
+			margin-left:50px; 	
+			border: 3px solid rgba(255, 255, 255, 0.5);
+		}
+		.tx{
+			width: 100px;	
+			height: 100px;	
+			background-color: #000;
+			border-radius: 50%;
+			margin:20px auto;
+			position: relative;
+		}
+		.tx::before,.tx::after{
+			content: "";
+			position: absolute;
+			width: 20px;	
+			height: 20px;	
+			border-radius: 50%;
+			background-color: yellow;
+			animation: change infinite 1s ;
+		}
+		.tx::before{
+			left: 13px;
+			top: 32px;
+			
+		}
+		.tx::after{
+			right: 13px;
+			top: 32px;
+		}
+		.mouth{
+			width: 10px;	
+			height: 10px;	
+			border-radius: 50%;
+			background-color: #fff;
+			position: absolute;
+			bottom: 20px;
+			left: 45px;
+			transition: all 2s;
+		}
+		.text{
+			display: block;
+			text-align: center;
+			margin-top: 	30px;
+		}
+		@keyframes change{
+			0%{
+				transform: scale(1);
+			}
+			100%{
+				transform: scale(1,0.1);
+
+			}
+		}
+		.self:hover .mouth{
+			transform: scale(2,0.5)
+		}
+		.self:hover .tx::before{
+			animation: change  1s
+		}
+			.self:hover .tx::after{
+			animation: change 1s
+		}
+		.msg{
+			height: 200px;	
+			width: 300px;	
+			margin-left: 	200px;
+			padding-top:20px ;
+			box-sizing: border-box;
+		}
+		.msg ul li{
+			height: 40px;	
+			/*color: red;*/
+		}
+		.skill{
+			padding-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper ">
+	<div class='clearfix'>	
+        <div class="self fl">
+	       <span class='text'>头像保密别摸我哦</span>
+		<div class='tx'>	
+		<div class="mouth">	</div>
+		</div>
+	</div>
+	<div class="msg fl">	
+	<ul>
+		<li>学校：浙江财经大学东方学院</li>
+		<li>专业：行政管理</li>
+		<li>名字：邱展鹏</li>
+		<li>电话：13456306322</li>
+		<li>email：lhy1314nice@163.com</li>
+	</ul>
+	</div>	
+	</div>
+	<div class='skill'>
+		<p>	我擅长js ，jQuery，AngularJS 熟悉脏检查机制，AJAX,bs框架，zepto，精通div+css布局，熟悉响应式设计，等等，并在不断学习后端语言</p>
+		<p>	ps：这句话很重要哦，本人是就读的行政管理专业，由于大学期间错过了报双专业的时间，so并不是计算机专业，然后就开始自学web前端知识。我很喜欢前端技术的,有跟过一段时间的全栈工程师，我自己虽然没什么线上项目基础，但做过一些demo：如用canvas开发的 flappy-bird 的网页游戏，和用移动webApp--豌豆一刻 --等等，本人希望以实习生的身份进入贵公司学校发展。</p>
+	</div>
+	</div>
+	
+</body>
+</html>
